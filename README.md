@@ -40,3 +40,33 @@ To install the required packages, you'll need to have `discord.py` and any other
    ```bash
    python3 bot.py
    ```
+
+   This Discord bot is designed to notify a specific channel when a Rumble livestream goes live. Here’s a breakdown of its functionality:
+
+### Description
+
+The Rumble Stream Notification Bot is a simple, automated bot that monitors a user’s Rumble streaming status and sends a notification to a designated Discord channel when the stream goes live. Using `discord.py`, the bot checks Rumble's API at regular intervals (every 5 minutes) to see if there is an active livestream. If a stream is detected, it sends a message in the configured channel with a link to the stream. 
+
+### Key Features
+
+- **Automated Stream Detection**: The bot periodically checks the Rumble API for live streaming status. This check is set to run every 5 minutes, allowing for near real-time updates without overwhelming the API.
+  
+- **Discord Channel Notifications**: Once a live stream is detected, the bot posts an alert in a specific Discord channel, tagging it with a "live" icon (🔴) and providing a link to the stream. This link is configurable in `config.json` for easy updates.
+
+- **Flexible Configuration**: Key bot configurations, including the Discord bot token, channel ID, Rumble API URL, and stream URL, are stored in `config.json` for easy access and adjustment.
+
+### How It Works
+
+1. **API Call to Rumble**: The bot uses `subprocess` to call `curl` and fetch JSON data from the Rumble API. It checks if any stream in the response is flagged as "live."
+  
+2. **Notification Logic**: When a live stream is detected, the bot sets a flag (`STREAM_DETECTED`) to avoid duplicate notifications. It sends a Discord message only the first time a live stream is detected or when a previous stream has ended and a new one begins.
+
+3. **Error Handling**: The bot includes basic error handling to log issues such as JSON parsing errors or network problems, ensuring it continues to run smoothly.
+
+### Use Cases
+
+- **Content Creators**: Ideal for streamers on Rumble who want to keep their Discord community engaged by notifying them when they go live.
+  
+- **Community Engagement**: Great for community managers who want to automate live stream notifications for their audience without manually sending alerts.
+
+This bot is straightforward, reliable, and tailored for real-time engagement with Discord users, making it an excellent tool for content creators and community managers.
