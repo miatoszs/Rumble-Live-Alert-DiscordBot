@@ -1,3 +1,5 @@
+   This Discord bot is designed to notify a specific channel when a Rumble livestream goes live. Here’s a breakdown of its functionality:
+
 To install the required packages, you'll need to have `discord.py` and any other dependencies for your bot. Here’s a command to set up a virtual environment, install `discord.py`, and any additional Python packages you may need.
 
 1. **Clone the repo**:
@@ -41,7 +43,6 @@ To install the required packages, you'll need to have `discord.py` and any other
    python3 bot.py
    ```
 
-   This Discord bot is designed to notify a specific channel when a Rumble livestream goes live. Here’s a breakdown of its functionality:
 
 ### Description
 
