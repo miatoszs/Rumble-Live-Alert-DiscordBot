@@ -1,21 +1,26 @@
 To install the required packages, you'll need to have `discord.py` and any other dependencies for your bot. Here’s a command to set up a virtual environment, install `discord.py`, and any additional Python packages you may need.
 
-1. **Navigate to your project directory**:
+1. **Clone the repo**:
    ```bash
-   cd /path/to/your/project
+   git clone https://github.com/miatoszs/Rumble-Live-Alert-DiscordBot.git
    ```
 
-2. **Create a virtual environment** (optional but recommended):
+2. **Navigate to your project directory**:
+   ```bash
+   cd Rumble-Live-Alert-DiscordBot
+   ```
+
+3. **Create a virtual environment** (optional but recommended):
    ```bash
    python3 -m venv venv
    ```
 
-3. **Activate the virtual environment**:
+4. **Activate the virtual environment**:
    ```bash
    source venv/bin/activate
    ```
 
-4. **Install requirements**:
+5. **Install requirements**:
    Create a `requirements.txt` file if you haven't already, and add necessary packages like `discord.py`. Then use:
 
    ```bash
@@ -28,4 +33,10 @@ To install the required packages, you'll need to have `discord.py` and any other
    pip install discord.py requests
    ```
 
-After installing, you can proceed with running your bot. If you added the requirements to a `requirements.txt` file, your setup should be easy to replicate later.
+6. **Edit the config**:
+   You need to edit the `config.json`
+
+7. **Start the bot**:
+   ```bash
+   python3 bot.py
+   ```
