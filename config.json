@@ -1,0 +1,7 @@
+{
+  "discord_token": "YOUR_BOT_TOKEN",
+  "channel_id": YOUR_CHANNEL_ID,
+  "rumble_api_url": "YOUR_RUMBLE_API_URL: https://rumble.com/account/livestream-api",
+  "stream_url": "YOUR_RUMBLE_STATIC_STREAM_URL: https://rumble.com/account/static-video-urls" 
+}
+
